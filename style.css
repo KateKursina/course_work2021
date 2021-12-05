@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.main__class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 60px;
+  background-color: #fa6648;
+}
+
+.menu .menu__logo {
+  margin-left: 20px;
+}
+
+.menu .menu__urls {
+  margin-left: 15px;
+}
+
+.menu__urls ul {
+  display: flex;
+  align-items: center;
+}
+
+.menu__urls ul li {
+  list-style: none;
+}
+
+.menu__urls ul li:nth-child(2) {
+  margin-left: 10px;
+}
+
+.menu__urls ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+.menu__urls ul li a:hover {
+  color: black;
+  transition: 0.5s;
+}
+
+.search__container .container__text h2 {
+  font-size: 45px;
+  text-align: center;
+}
+
+.search__container .container__text p {
+  margin-top: 20px;
+}
+
+.search__container .container__form {
+  margin-top: 30px;
+}
+
+.search__container .container__form input[type="button"] {
+  padding: 13px;
+  margin-left: 10px;
+  width: 30%;
+  color: white;
+  background-color: #4f66af;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #4f66af;
+  transition: 0.3s;
+}
+.search__container .container__form input[type="button"]:hover {
+  background-color: #3c5092;
+  box-shadow: 0 0 10px #3c5092;
+  transition: 0.3s;
+}
+.search__container .container__form input[type="text"] {
+  min-height: 40px;
+  width: 60%;
+  outline: none;
+  font-size: 18px;
+  line-height: 40px;
+  border: 0;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.search__container .container__form input[type="text"]:hover {
+  border-bottom: 4px solid lightgreen;
+  transition: 0.5s;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 60px;
+  background-color: #fa6648;
+  color: white;
+}
+
+.footer p:nth-child(2) {
+  font-size: 12px;
+}
