@@ -115,3 +115,128 @@
 .footer p:nth-child(2) {
   font-size: 12px;
 }
+
+/* СПИСОК ПРИЮТОВ */
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  width: 80%;
+}
+
+.main__container .card {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #962eff;
+  border: 2px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 10px;
+  color: white;
+  margin-top: 15px;
+}
+.input__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input__main button {
+  padding: 7px 15px 7px 15px;
+  background-color: #fff;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid black;
+  border-bottom: 2px solid black;
+}
+.input__main button:hover {
+  cursor: pointer;
+}
+.test-align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pagination {
+  display: flex;
+  margin-top: 25px;
+}
+.pagination__elem {
+  margin-left: 10px;
+  padding-top: 5px;
+  transition: 0.3s;
+}
+.buttons:hover {
+  cursor: pointer;
+  padding-top: 1px;
+  margin-bottom: 2px;
+  transition: 0.3s;
+}
+.pagination__elem:hover .fa-circle {
+  color: #fa6648;
+  transition: 0.2s;
+}
+.search__form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 50%;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #962eff;
+  border: 2px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 10px;
+}
+
+.search__form input {
+  padding: 10px;
+  border: 2px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 10px;
+  outline: none;
+}
+
+.search__form textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: 2px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 10px;
+  outline: none;
+}
+
+.send-button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  margin-top: 10px;
+}
+
+.send-button input {
+  background-color: rgb(255, 246, 234);
+}
+
+.send-button input:hover {
+  cursor: pointer;
+}
+
+.main_container_for_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main_container_for_form h2 {
+  font-weight: bold;
+}
