@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.main__class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 60px;
+  background-color: #fa6648;
+}
+
+.menu .menu__logo {
+  margin-left: 20px;
+}
+
+.menu .menu__urls {
+  margin-left: 15px;
+}
+
+.menu__urls ul {
+  display: flex;
+  align-items: center;
+}
+
+.menu__urls ul li {
+  list-style: none;
+}
+
+.menu__urls ul li:nth-child(2) {
+  margin-left: 10px;
+}
+
+.menu__urls ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+.menu__urls ul li a:hover {
+  color: black;
+  transition: 0.5s;
+}
+
+.search__container .container__text h2 {
+  font-size: 45px;
+  text-align: center;
+}
+
+.search__container .container__text p {
+  margin-top: 20px;
+}
+
+.search__container .container__form {
+  margin-top: 30px;
+}
+
+.search__container .container__form input[type="submit"] {
+  padding: 13px;
+  margin-left: 10px;
+  width: 30%;
+  color: white;
+  background-color: #4f66af;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #4f66af;
+  transition: 0.3s;
+}
+.search__container .container__form input[type="submit"]:hover {
+  background-color: #3c5092;
+  box-shadow: 0 0 10px #3c5092;
+  transition: 0.3s;
+}
+.search__container .container__form input[type="text"] {
+  min-height: 40px;
+  width: 60%;
+  outline: none;
+  font-size: 18px;
+  line-height: 40px;
+  border: 0;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.search__container .container__form input[type="text"]:hover {
+  border-bottom: 4px solid lightgreen;
+  transition: 0.5s;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 60px;
+  background-color: #fa6648;
+  color: white;
+  margin-top: 15px;
+}
+
+.footer p:nth-child(2) {
+  font-size: 12px;
+}
+
+/* СПИСОК ПРИЮТОВ */
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  width: 80%;
+}
+
+.main__container .card {
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px;
+  background-color: #962eff;
+  border: 2px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 10px;
+  color: white;
+  margin-top: 15px;
+  width: 100%;
+}
+.input__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input__main a {
+  padding: 7px 15px 7px 15px;
+  background-color: #fff;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid black;
+  border-bottom: 2px solid black;
+  text-decoration: none;
+}
+.input__main a:hover {
+  cursor: pointer;
+}
+.test-align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pagination {
+  display: flex;
+  margin-top: 25px;
+}
+.pagination__elem {
+  margin-left: 10px;
+  padding-top: 5px;
+  transition: 0.3s;
+}
+.buttons:hover {
+  cursor: pointer;
+  padding-top: 1px;
+  margin-bottom: 2px;
+  transition: 0.3s;
+}
+.pagination__elem:hover .fa-circle {
+  color: #fa6648;
+  transition: 0.2s;
+}
+
+/* Форма */
+
+.search__form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 50%;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #962eff;
+  border: 2px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 10px;
+}
+
+.search__form input {
+  padding: 10px;
+  border: 2px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 10px;
+  outline: none;
+}
+
+.search__form textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: 2px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 10px;
+  outline: none;
+}
+
+.send-button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  margin-top: 10px;
+}
+
+.send-button input {
+  background-color: rgb(255, 246, 234);
+}
+
+.send-button input:hover {
+  cursor: pointer;
+}
+
+.main_container_for_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main_container_for_form h2 {
+  font-weight: bold;
+}
