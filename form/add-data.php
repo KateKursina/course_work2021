@@ -8,4 +8,4 @@ $id = $_POST["shelter_id"];
 
 mysqli_query($connect, "INSERT INTO `clients` (`id`, `name`, `reason`, `shelter_id`) VALUES (NULL, '$name', '$description', '$id')");
 
-header("Location: /");
+header("Location: /wait/index.php");

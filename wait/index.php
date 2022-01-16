@@ -23,15 +23,10 @@ session_start();
     <main>
       <div class="search__container">
         <div class="container__text">
-          <h2>Найти приют</h2>
-          <p>
-            Найдите любой интересующий вас приют! Просто введите название вашего округа.
+          <p class = "weight-text">
+            Ваша заявка будет рассмотрена!
           </p>
         </div>
-        <form method="POST" action="/list/index.php" class="container__form">
-          <input type="text" name="find-shelter" id="" />
-          <input type="submit" value="Поиск" />
-        </form>
       </div>
     </main>
     <?php include_once $_SERVER["DOCUMENT_ROOT"]."/php/ui/footer/footer.php"; ?>

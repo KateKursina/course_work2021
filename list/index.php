@@ -1,6 +1,9 @@
 <?php
 
-if(empty($_POST["find-shelter"])) header("Location: /");
+session_start();
+
+
+if(empty($_POST["find-shelter"])) header("Location: /index.php");
 
 require_once $_SERVER["DOCUMENT_ROOT"]."/php/database/connect.php";
 
@@ -31,7 +34,7 @@ $data_from_table = mysqli_fetch_all(mysqli_query($connect, "SELECT * FROM `shelt
     <main class="test-align-center">
       <div class="main__container">
         <?php
-
+          $counter = 0;
           foreach($data_from_table as $item){
             if(str_contains(mb_strtolower($item["AdmArea"], "utf-8"), mb_strtolower($name_for_search, "utf-8"))){
               echo '        <div class="card">
@@ -44,40 +47,24 @@ $data_from_table = mysqli_fetch_all(mysqli_query($connect, "SELECT * FROM `shelt
                                   <p>
                                     '.$item["AdmArea"].', <br>'.$item["District"].', <br>'.$item["Address"].', <br>'.$item["Phone"].'
                                   </p>
-                                </div>
-                                <div class="input__main">
-                                  <a href="/form/index.php?id='.$item["ID"].'">Обратиться</a>
-                                </div>
-                              </div>
+                                </div>';
+                                
+                                if(isset($_SESSION["user"])){
+                                    echo '<div class="input__main">
+                                    <a href="/form/index.php?id='.$item["ID"].'">Обратиться</a>
+                                  </div>';
+                                }
+                              echo '</div>
                             </div>';
+                            $counter++;
             }
 
           }
-
+          if($counter == 0){
+            echo '<p class = "weight-text">По вашему запросу ничего не удалось найти!</p>';
+            echo '<style>.main__container{width: 100%;} .weight-text{font-weight: bold; font-size: 24px;}</style>';
+          }
         ?>
-      </div>
-      <div class="pagination">
-        <div class="pagination__elem">
-          <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        </div>
-        <div class="pagination__elem buttons">
-          <i class="fa fa-circle" aria-hidden="true"></i>
-        </div>
-        <div class="pagination__elem buttons">
-          <i class="fa fa-circle" aria-hidden="true"></i>
-        </div>
-        <div class="pagination__elem buttons">
-          <i class="fa fa-circle" aria-hidden="true"></i>
-        </div>
-        <div class="pagination__elem buttons">
-          <i class="fa fa-circle" aria-hidden="true"></i>
-        </div>
-        <div class="pagination__elem buttons">
-          <i class="fa fa-circle" aria-hidden="true"></i>
-        </div>
-        <div class="pagination__elem">
-          <i class="fa fa-arrow-right" aria-hidden="true"></i>
-        </div>
       </div>
     </main>
     <?php include_once $_SERVER["DOCUMENT_ROOT"]."/php/ui/footer/footer.php"; ?>

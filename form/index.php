@@ -1,6 +1,12 @@
 <?php
 
-if(!isset($_GET["id"])) header("Location: /");
+session_start();
+
+if(!isset($_SESSION["user"])){
+  header("Location: /index.php");
+}
+
+if(!isset($_GET["id"])) header("Location: /index.php");
 $shelter_id = $_GET["id"];
 
 ?>
@@ -23,7 +29,7 @@ $shelter_id = $_GET["id"];
       <h2>Заполните форму</h2>
       <form action="add-data.php" method="POST" class="search__form">
         <input type="text" name="name" id="" placeholder="Ваше имя" />
-        <textarea name="question" id="" cols="30" rows="10">Опишите проблему</textarea>
+        <textarea name="question" id="" cols="30" rows="10" placeholder="Опишите проблему"></textarea>
         <input type="hidden" name = "shelter_id" value="<?php echo $shelter_id; ?>">
         <div class="send-button">
           <input type="submit" value="Отправить" />

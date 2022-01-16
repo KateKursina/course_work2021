@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once $_SERVER["DOCUMENT_ROOT"]."/php/database/connect.php";
 
 $data_from_table = mysqli_fetch_all(mysqli_query($connect, "SELECT * FROM `shelters`"), MYSQLI_ASSOC);
@@ -46,29 +48,6 @@ $data_from_table = mysqli_fetch_all(mysqli_query($connect, "SELECT * FROM `shelt
         }
 
       ?>
-      </div>
-      <div class="pagination">
-        <div class="pagination__elem">
-          <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        </div>
-        <div class="pagination__elem buttons">
-          <i class="fa fa-circle" aria-hidden="true"></i>
-        </div>
-        <div class="pagination__elem buttons">
-          <i class="fa fa-circle" aria-hidden="true"></i>
-        </div>
-        <div class="pagination__elem buttons">
-          <i class="fa fa-circle" aria-hidden="true"></i>
-        </div>
-        <div class="pagination__elem buttons">
-          <i class="fa fa-circle" aria-hidden="true"></i>
-        </div>
-        <div class="pagination__elem buttons">
-          <i class="fa fa-circle" aria-hidden="true"></i>
-        </div>
-        <div class="pagination__elem">
-          <i class="fa fa-arrow-right" aria-hidden="true"></i>
-        </div>
       </div>
     </main>
     <?php include_once $_SERVER["DOCUMENT_ROOT"]."/php/ui/footer/footer.php"; ?>
